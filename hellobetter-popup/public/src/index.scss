@@ -1,0 +1,175 @@
+$green-moss: #037D6B;
+$greys-graphite: #596666;
+$greys-charcoal: #363B3B;
+$greys-pebble: #B0C2C2;
+$greys-white: #ffffff;
+$cta-blue: #5770EF;
+$reds-nectarine: #F06152;
+
+.popupS-content {
+    padding: 24px 16px !important;
+}  
+
+.popupS-close {
+    top: 24px !important;
+    right: 30px !important;
+    color: #868989;
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+  .popupS-content {
+      padding: 32px !important;
+  }
+  .popupS-close {
+    display: block;
+  }
+}
+
+.hellobetter-popup {
+    font-family: 'Tisa Sans Pro';
+    font-size: 16px;
+    width: 100%;
+    max-width: 420px;
+    color: $greys-graphite;
+
+    .popup_header {
+        display: flex;
+        flex-direction: column;
+
+        .banner {
+            min-width: 100px;
+
+            img {
+                width: 100%;
+                height: 100px;                
+                object-fit: contain;
+                border-radius: 8px;
+            }
+        }
+
+        .copy {
+            h4 {
+                font-size: 1.25em;
+                font-weight: bold;
+                line-height: 150%;
+                color: $greys-charcoal;
+                margin: 0;
+            }
+
+            p {
+                font-size: 1.1250em;
+                color: $greys-graphite;
+                line-height: 150%;
+                margin: 0;
+            }
+        }
+
+        &.success {
+            flex-direction: column;
+
+            .banner {
+                img {
+                    width: 100%;
+                    height: 137px;
+                    object-fit: contain;
+                    border-radius: 0;
+                }
+            }
+
+            .copy {
+                padding: 0 1.5em;
+                margin-top: 0.5em;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (min-width: 768px){
+          flex-direction: row;
+          
+            .banner {
+                img {
+                    width: 100px;
+                    object-fit: cover;
+                }
+            }       
+            
+            .copy {
+              padding-left: 1em;
+              padding-right: 2em;
+            }   
+        }
+    }
+
+    .popup_body {
+        margin-top: 1.5em;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            input::placeholder {
+                color: $greys-pebble;
+            }
+
+            input[type=email] {
+                font-family: 'Tisa Sans Pro';
+                border: 1px solid $greys-pebble;
+                font-size: 1.1250em;
+                border-radius: 10px;
+                width: auto;
+                height: 48px;
+                line-height: 24px;
+                color: $greys-charcoal;
+                padding: 0 16px;
+            }
+
+            input[type=email]:focus {
+                border: 1px solid $cta-blue;
+            }
+
+            label {
+                font-size: 0.6875em;
+                color: $reds-nectarine;
+                line-height: 1.1250em;
+                margin-top: .5em;
+            }
+
+            button {
+                margin-top: 0.5em;
+                border-radius: 8px;
+                background: $green-moss;
+                padding: 0.75em;
+                border: 0 none;
+                color: $greys-white;
+                cursor: pointer;
+                font-size: 1.25em;
+                line-height: 24px;
+                text-align: center;
+                font-family: 'Tisa Sans Pro';
+                font-weight: 400;
+                display: block;
+                letter-spacing: auto;
+                text-transform : none;
+                text-decoration: none;
+                transition: none;
+            }
+        }
+    }
+
+    a.close-popup {
+        display: block;
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 1.1250em;
+        font-weight: bold;
+        color: $green-moss;
+        text-decoration: none;
+        
+        @media only screen and (min-width: 768px){
+          display: none;
+        }
+    }
+
+}
